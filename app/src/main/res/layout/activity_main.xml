@@ -1,0 +1,29 @@
+<android.support.percent.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_widthPercent="100%" />
+
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/percent_drawer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_widthPercent="70%"
+        android:layout_gravity="right"
+        android:background="@color/cyan"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/content_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="hi"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </android.support.percent.PercentRelativeLayout>
+</android.support.percent.PercentFrameLayout>

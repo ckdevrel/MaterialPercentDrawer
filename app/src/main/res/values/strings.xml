@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">MaterialPercentDrawer</string>
+
+
+        <string name="hello_world">Hello world!</string>
+        <string name="action_settings">Settings</string>
+
+
+
+        <string-array name="names">
+
+            <item>red</item>
+            <item>pink</item>
+            <item>purple</item>
+            <item>deepblue</item>
+            <item>indigo</item>
+            <item>blue</item>
+            <item>lightblue</item>
+            <item>cyan</item>
+            <item>teal</item>
+            <item>green</item>
+
+        </string-array>
+
+
+        <array name="color_codes">
+            <item>@color/red</item>
+            <item>@color/pink</item>
+            <item>@color/purple</item>
+            <item>@color/deepblue</item>
+            <item>@color/indigo</item>
+            <item>@color/blue</item>
+            <item>@color/lightblue</item>
+            <item>@color/cyan</item>
+            <item>@color/teal</item>
+            <item>@color/green</item>
+
+        </array>
+
+    <array name="avator_icons">
+        <item>@drawable/image_1</item>
+        <item>@drawable/image_2</item>
+        <item>@drawable/image_3</item>
+        <item>@drawable/image_4</item>
+        <item>@drawable/image_5</item>
+        <item>@drawable/image_6</item>
+        <item>@drawable/image_7</item>
+        <item>@drawable/image_8</item>
+        <item>@drawable/image_9</item>
+        <item>@drawable/image_10</item>
+    </array>
+
+</resources>

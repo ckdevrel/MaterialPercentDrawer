@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+
+    <!--textcolors-->
+    <color name="primary">#673ab7</color>
+    <color name="primary_dark">#512da8</color>
+    <color name="accent">#ffc400</color>
+    <color name="text_primary">#D9FFFFFF</color>
+    <color name="text_secondary">#D9000000</color>
+    <color name="photo_tint">#88101010</color>
+
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+
+    <!--divider color-->
+    <color name="divider_color">#B6B6B6</color>
+
+    <!--Material color-->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="red">#F44336</color>
+    <color name="pink">#FF4081</color>
+    <color name="purple">#9C27B0</color>
+    <color name="deepblue">#7C4DFF</color>
+    <color name="indigo">#3F51B5</color>
+    <color name="blue">#448AFF</color>
+    <color name="lightblue">#03A9F4</color>
+    <color name="cyan">#00BCD4</color>
+    <color name="teal">#009688</color>
+    <color name="green">#4CAF50</color>
+    <color name="lightgreen">#8BC34A</color>
+    <color name="lime">#CDDC39</color>
+    <color name="yellow">#FFEB3B</color>
+    <color name="amber">#FFC107</color>
+    <color name="orange">#FF9800</color>
+    <color name="deeporange">#FF5722</color>
+    <color name="brown">#795548</color>
+    <color name="grey">#9E9E9E</color>
+    <color name="bluegrey">#607D8B</color>
+
+
+    <color name="transparent">#00000000</color>
+    <color name="transparent_black">#66000000</color>
+    <color name="transparent_black_80">#BF000000</color>
+    <color name="transparent_black_50">#80000000</color>
+</resources>

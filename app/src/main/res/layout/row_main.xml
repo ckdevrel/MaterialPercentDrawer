@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/white">
+
+    <android.support.percent.PercentFrameLayout
+        android:id="@+id/percent_frame_image"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_widthPercent="30%">
+
+
+        <ImageView
+            android:id="@+id/img_front"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_marginPercent="10%" />
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_marginPercent="5%" />
+    </android.support.percent.PercentFrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/percent_frame_image"
+        android:orientation="vertical"
+        app:layout_widthPercent="70%"
+        app:layout_marginLeftPercent="5%"
+        app:layout_marginRightPercent="5%"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txt_desig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Android developer"
+            android:textColor="@color/primary_text"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp" />
+    </LinearLayout>
+</android.support.percent.PercentRelativeLayout>
+
