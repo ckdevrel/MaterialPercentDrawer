@@ -21,6 +21,8 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
 
     private boolean isToggle;
 
+    private int mPostion = 0;
+
 
 
     public MainAdapter(Context context, List<MainModel> mainList) {
@@ -50,13 +52,23 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
             @Override
             public void onClick(View view) {
 
+
                 if(!isToggle){
+                    mMainList.get(position).setIsChecked(true);
                     isToggle = true;
                     mOnListItemClickListener.openDrawer(view, position, mMainList.get(position));
+                    holder.percentFrameImage.setBackgroundColor(mContext.getResources().getColor(R.color.transparent_black_50));
+                    holder.imgFront.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_chevron_left_white_48dp));
 
                 }else{
-                    isToggle = false;
-                    mOnListItemClickListener.closeDrawer(view, position, mMainList.get(position));
+                    if(mMainList.get(position).isChecked()) {
+                        mMainList.get(position).setIsChecked(false);
+                        isToggle = false;
+                        mOnListItemClickListener.closeDrawer(view, position, mMainList.get(position));
+                        holder.percentFrameImage.setBackgroundColor(mContext.getResources().getColor(android.R.color.transparent));
+                        holder.imgFront.setImageDrawable(mMainList.get(position).getAvatorIcons());
+
+                    }
 
                 }
 
@@ -88,8 +100,12 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
         @Override
         public void onClick(View view) {
             if(!isToggle) {
+                mMainList.get(getAdapterPosition()).setIsChecked(true);
                 isToggle = true;
                 mOnListItemClickListener.openDrawer(view, getAdapterPosition(), mMainList.get(getAdapterPosition()));
+                percentFrameImage.setBackgroundColor(mContext.getResources().getColor(R.color.transparent_black_50));
+                imgFront.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_chevron_left_white_48dp));
+
             }
 
         }
@@ -98,8 +114,6 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
     public void setOnItemClickListener(OnListItemClickListener onListItemClickListener) {
         this.mOnListItemClickListener = onListItemClickListener;
     }
-
-
 
 
 }

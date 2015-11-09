@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.percent.PercentRelativeLayout;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import java.util.ArrayList;
@@ -14,7 +13,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends Activity implements View.OnClickListener,OnListItemClickListener {
 
-    private RecyclerView mRecyclerView;
+    private PercentRecyclerView mRecyclerView;
     private PercentRelativeLayout mPercentRelativeLayout;
 
     private MainAdapter mAdapter;
@@ -31,7 +30,7 @@ public class MainActivity extends Activity implements View.OnClickListener,OnLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mRecyclerView = (RecyclerView)findViewById(R.id.list);
+        mRecyclerView = (PercentRecyclerView)findViewById(R.id.list);
         mPercentRelativeLayout = (PercentRelativeLayout)findViewById(R.id.percent_drawer);
 
         colors = getResources ().getIntArray(R.array.color_codes);
@@ -68,6 +67,8 @@ public class MainActivity extends Activity implements View.OnClickListener,OnLis
         mPercentRelativeLayout.setAnimation(AnimationUtils.slideInAnimation());
         mPercentRelativeLayout.setVisibility(View.VISIBLE);
         mPercentRelativeLayout.setBackgroundColor(colors[position]);
+
+        mRecyclerView.enableVersticleScroll(false);
     }
 
     @Override
@@ -75,5 +76,7 @@ public class MainActivity extends Activity implements View.OnClickListener,OnLis
 
         mPercentRelativeLayout.setAnimation(AnimationUtils.slideOutAnimation());
         mPercentRelativeLayout.setVisibility(View.GONE);
+        mRecyclerView.enableVersticleScroll(true);
+
     }
 }

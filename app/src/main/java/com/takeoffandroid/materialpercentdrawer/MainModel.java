@@ -11,7 +11,7 @@ public class MainModel {
     private String names;
     private int colors;
 
-    private boolean isChecked = false;
+    private boolean isChecked;
 
     private Drawable avatorIcons;
 
