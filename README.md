@@ -1,3 +1,5 @@
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-MaterialPercentDrawer-green.svg?style=true)](https://android-arsenal.com/details/3/2752)
+
 # MaterialPercentDrawer
 
 Uses
