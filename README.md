@@ -17,31 +17,31 @@ compile 'com.android.support:percent:23.1.0'
 ```
 **Note:** You have to use buildToolsVersion above 23.0.1 to make use of Percent support.
 
-To add width percent wise:
---------------------------
+**To add width percent wise:**
+```
 app:layout_widthPercent="70%"
-
-To add height percent wise:
----------------------------
+```
+**To add height percent wise:**
+```
 app:layout_heightPercent="30%"
-
-To add margin percent wise:
----------------------------
+```
+**To add margin percent wise:**
+```
 app:layout_marginPercent="10%"
-
-To add margin left percent wise:
---------------------------------
+```
+**To add margin left percent wise:**
+```
 app:layout_marginLeftPercent="10%"
-
-To add margin right percent wise:
---------------------------------
+```
+**To add margin right percent wise:**
+```
 app:layout_marginRightPercent="10%"
-
-To add margin top percent wise:
---------------------------------
+```
+**To add margin top percent wise:**
+```
 app:layout_marginTopPercent="10%"
-
-To add margin bottom percent wise:
---------------------------------
+```
+**To add margin bottom percent wise:**
+```
 app:layout_marginBottomPercent="10%"
-
+```
