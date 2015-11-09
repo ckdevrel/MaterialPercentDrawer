@@ -41,12 +41,11 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
     public void onBindViewHolder(final ViewHolder holder, final int position) {
 
 
-           holder.txtName.setTextColor (mMainList.get (position).getColors());
+           holder.txtName.setTextColor(mMainList.get(position).getColors());
 
         holder.txtName.setText(mMainList.get(position).getNames().toUpperCase());
         holder.imgFront.setImageDrawable(mMainList.get(position).getAvatorIcons());
 
-        holder.imgBack.setVisibility(View.GONE);
         holder.imgFront.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -73,7 +72,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
 
     public  class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView txtName;
-        public ImageView imgFront,imgBack;
+        public ImageView imgFront;
         public PercentFrameLayout percentFrameImage;
 
 
@@ -81,7 +80,6 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
             super(itemView);
             txtName = (TextView) itemView.findViewById(R.id.txt_name);
             imgFront = (ImageView)itemView.findViewById(R.id.img_front);
-            imgBack = (ImageView)itemView.findViewById(R.id.img_back);
 
             percentFrameImage = (PercentFrameLayout)itemView.findViewById(R.id.percent_frame_image);
             itemView.setOnClickListener(this);
@@ -89,10 +87,10 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
 
         @Override
         public void onClick(View view) {
-
-            isToggle = true;
-            mOnListItemClickListener.openDrawer(view, getAdapterPosition(), mMainList.get(getAdapterPosition()));
-
+            if(!isToggle) {
+                isToggle = true;
+                mOnListItemClickListener.openDrawer(view, getAdapterPosition(), mMainList.get(getAdapterPosition()));
+            }
 
         }
     }

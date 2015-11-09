@@ -11,6 +11,8 @@ public class MainModel {
     private String names;
     private int colors;
 
+    private boolean isChecked = false;
+
     private Drawable avatorIcons;
 
 
@@ -37,5 +39,13 @@ public class MainModel {
 
     public void setColors(int colors) {
         this.colors = colors;
+    }
+
+    public boolean isChecked() {
+        return isChecked;
+    }
+
+    public void setIsChecked(boolean isChecked) {
+        this.isChecked = isChecked;
     }
 }

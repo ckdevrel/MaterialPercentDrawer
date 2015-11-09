@@ -8,9 +8,6 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.view.animation.AccelerateDecelerateInterpolator;
-import android.view.animation.Animation;
-import android.view.animation.TranslateAnimation;
 
 import java.util.ArrayList;
 
@@ -65,39 +62,18 @@ public class MainActivity extends Activity implements View.OnClickListener,OnLis
     }
 
 
-
-    private Animation slideInAnimation() {
-
-        Animation inFromRight = new TranslateAnimation(
-                Animation.RELATIVE_TO_PARENT,  +1.0f, Animation.RELATIVE_TO_PARENT,  0.0f,
-                Animation.RELATIVE_TO_PARENT,  0.0f, Animation.RELATIVE_TO_PARENT,   0.0f
-        );
-        inFromRight.setDuration(500);
-        inFromRight.setInterpolator(new AccelerateDecelerateInterpolator());
-        return inFromRight;
-    }
-
-    private Animation slideOutAnimation() {
-        Animation outtoRight = new TranslateAnimation(
-                Animation.RELATIVE_TO_PARENT,  0.0f, Animation.RELATIVE_TO_PARENT,  +1.0f,
-                Animation.RELATIVE_TO_PARENT,  0.0f, Animation.RELATIVE_TO_PARENT,   0.0f
-        );
-        outtoRight.setDuration(500);
-        outtoRight.setInterpolator(new AccelerateDecelerateInterpolator());
-        return outtoRight;
-    }
-
     @Override
     public void openDrawer(View v, int position, MainModel mainModel) {
 
-        mPercentRelativeLayout.setAnimation(slideInAnimation());
+        mPercentRelativeLayout.setAnimation(AnimationUtils.slideInAnimation());
         mPercentRelativeLayout.setVisibility(View.VISIBLE);
+        mPercentRelativeLayout.setBackgroundColor(colors[position]);
     }
 
     @Override
     public void closeDrawer(View v, int position, MainModel mainModel) {
 
-        mPercentRelativeLayout.setAnimation(slideOutAnimation());
+        mPercentRelativeLayout.setAnimation(AnimationUtils.slideOutAnimation());
         mPercentRelativeLayout.setVisibility(View.GONE);
     }
 }
